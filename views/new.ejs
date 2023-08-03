@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ('./partials/head.ejs') %>
+    <title>New Entry</title>
+</head>
+<body id="new">
+<%- include('./partials/nav.ejs') %>
+    <div class="new-entry">
+        <form class="new-form" action="/journal" method="POST">
+                
+                <fieldset><legend>Date</legend></fieldset>
+
+                <fieldset><legend>Time</legend></fieldset>
+                
+                <fieldset><legend>What method of consumption was used?</legend></fieldset>
+                
+                <fieldset><legend>Category</legend>
+                    <label for="category">
+                        <textarea name="description" id="" cols="100" rows="10"  style="resize:none" required></textarea>
+                    </label> 
+                </fieldset>
+                <input type="submit" value="Create"><a href="/journal"><span class="cancel-btn">Cancel</span></a>
+        </form>
+    </div>
+</body>
+</html>

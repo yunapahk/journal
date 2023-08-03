@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ('./partials/head.ejs') %>
+    <title>Show Entry</title>
+</head>
+<body id="show">
+<%- include('./partials/nav.ejs') %>
+<div class="show">
+
+    <h1><%=entry.username%>'s Post About:</h1>
+    <table class="centered responsive-table striped">
+        <thead>
+            <th>Strain</th><th>Type</th><th>Amount</th><th>Method</th>
+        </thead>
+        <tbody>
+            <td><%= entry.date %></td>
+            <td><%= entry.category %></td>
+            <td><%= entry.description %></td>
+        </tbody>
+    </table>
+    <div class="description">
+        <p><%= entry.description %></p>
+    </div>
+    <a href="/journal"><button>Go Back</button></a>
+
+</div>
+<script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
+</html>
